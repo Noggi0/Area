@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  db:
+    image: "mysql"
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    environment: 
+      MYSQL_ROOT_PASSWORD: AreaDesBG
+      MYSQL_DATABASE: Area
+    networks: 
+      - db-serv
+    volumes:
+      - ./server/init.sql:/docker-entrypoint-initdb.d/init.sql
+  web-server:
+    build: ./server
+    restart: always
+    depends_on: 
+      - db
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server:/app
+    environment:
+      - SQL_HOST=mysql
+      - SQL_USER=root
+      - SQL_PASSWORD=AreaDesBG
+      - SQL_DB=Area
+      - SQL_PORT=3306
+    networks:
+      - db-serv
+    command: bash -c "cd /app && npm install -g nodemon && npm install && nodemon server.js"
+  mobile-client:
+    build: ./mobile
+    depends_on:
+      - "web-server"
+    environment: 
+      - ANDROID_SDK_ROOT=/usr/lib/android-sdk
+    volumes:
+      - ./mobile:/mobile-app
+  web-client:
+    build: ./client
+    restart: always
+    ports:
+      - "8081:8081"
+    depends_on: 
+      - "web-server"
+      - "mobile-client"
+    volumes:
+      - ./client:/app
+      - ./mobile:/mobile-app
+    command: bash -c "cd /app && npm install && npm start"
+networks: 
+  db-serv:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.24.0.3/16
+volumes:
+    db-data:

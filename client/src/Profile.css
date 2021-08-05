@@ -1,0 +1,30 @@
+.Profile-link {
+    color: #61dafb;
+}
+
+.Profile-Title {
+    position: relative;
+    display: flex;
+    align-items: left;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Profile {
+    display: flex;
+    background-color: #222831;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: lightgrey;
+}
+  

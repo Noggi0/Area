@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@jimmycode/simple-oauth2-reddit": "^0.6.0",
+    "bug-killer": "^4.4.4",
+    "client-oauth2": "^4.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "google-auth-library": "^7.0.2",
+    "googleapis": "^67.1.1",
+    "lien": "^3.3.1",
+    "login-with-twitter": "^1.2.4",
+    "method-override": "^3.0.0",
+    "mysql": "^2.18.1",
+    "onedrive-api": "^1.0.1",
+    "opn": "^6.0.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "pretty-bytes": "^5.6.0",
+    "r-json": "^1.2.10",
+    "request": "^2.88.2",
+    "simple-oauth2": "^4.2.0",
+    "snoowrap": "^1.22.0",
+    "twit": "^2.2.11",
+    "twitch": "^4.4.12",
+    "twitch-webhooks": "^4.4.13",
+    "youtube-api": "^3.0.1"
+  }
+}

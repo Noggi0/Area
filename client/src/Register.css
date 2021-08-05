@@ -1,0 +1,58 @@
+.Register {
+    text-align: center;
+  }
+  
+  .Register-username {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  
+  .Register-password {
+    display: block;
+    margin-bottom: 3%;
+  }
+  
+  .Register-logo {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: 25vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Register-logo {
+      animation: Register-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .Register-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: grey;
+  }
+  
+  .Register-Title {
+    color: white;
+  }
+
+  .Register-link {
+    color: #61dafb;
+  }
+  
+  @keyframes Register-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .RegisterLink {
+      color: lightgray;
+  }
+  

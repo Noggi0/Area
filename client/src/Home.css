@@ -1,0 +1,28 @@
+.Home-link {
+    color: #61dafb;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cardsDisplay {
+    flex-direction: row;
+}
+
+.Home {
+    background-color: #222831;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: lightgrey;
+}
+  
